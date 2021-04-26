@@ -1,0 +1,25 @@
+import React, { Component } from "react";
+import Header from "./Header";
+import JSON from "./db.json";
+import DataDisplay from "./DataDisplay_bkp";
+
+class Home extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      info: JSON,
+    };
+  }
+  render() {
+    console.log(this.state.info);
+    return (
+      <div>
+        <Header />
+        <DataDisplay datalist={this.state.info} />
+      </div>
+    );
+  }
+}
+
+export default Home;
